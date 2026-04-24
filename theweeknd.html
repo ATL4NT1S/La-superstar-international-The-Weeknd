@@ -400,10 +400,10 @@
         <div class="container fade-in">
             <h2>Contact</h2>
             <p style="color: #ccc; margin-bottom: 30px;">Une question, une suggestion ou simplement envie de parler de The Weeknd ? Envoyez-moi un message !</p>
-            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message envoyé avec succès !');">
-                <input type="text" placeholder="Votre Nom" required>
-                <input type="email" placeholder="Votre Email" required>
-                <textarea rows="5" placeholder="Votre Message" required></textarea>
+            <form class="contact-form" action="https://formspree.io/f/mojyyobr" method="POST">
+                <input type="text" name="name" placeholder="Votre Nom" required>
+                <input type="email" name="email" placeholder="Votre Email" required>
+                <textarea name="message" rows="5" placeholder="Votre Message" required></textarea>
                 <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem;">Envoyer</button>
             </form>
         </div>
