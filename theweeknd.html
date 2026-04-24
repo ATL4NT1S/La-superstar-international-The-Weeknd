@@ -128,6 +128,8 @@
 
         .about-section { background-color: #111; }
         .albums-section { background-color: #0c0c0c; }
+        .evolution-section { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); }
+        .tours-section { background: linear-gradient(to bottom, #0c0c0c, #2b0f19, #0c0c0c); }
 
         .about-section h2, .albums-section h2 {
             font-size: 2.5rem;
@@ -135,25 +137,30 @@
             color: #e50914;
         }
 
-        .about-section p {
+        .evolution-section h2 { font-size: 2.5rem; margin-bottom: 30px; color: #8a2be2; text-shadow: 0 0 15px rgba(138, 43, 226, 0.6); }
+        .tours-section h2 { font-size: 2.5rem; margin-bottom: 30px; color: #ff0055; text-shadow: 0 0 15px rgba(255, 0, 85, 0.6); }
+
+        .about-section p, .evolution-section p, .tours-section p {
             font-size: 1.1rem;
             line-height: 1.8;
             font-weight: 300;
             max-width: 800px;
             margin: 0 auto;
+            margin-bottom: 20px;
         }
 
         /* Albums */
         .album-grid {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .album-card {
-            background-color: #1a1a1a;
-            width: 30%;
+            background: linear-gradient(145deg, #1a1a1a, #222);
+            border: 1px solid #333;
+            border-top: 3px solid #e50914;
             padding: 20px;
             border-radius: 10px;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -161,7 +168,8 @@
 
         .album-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(229, 9, 20, 0.2);
+            box-shadow: 0 15px 30px rgba(229, 9, 20, 0.4);
+            border-color: #e50914;
         }
 
         .album-card img {
@@ -220,7 +228,6 @@
             .nav-links.nav-active { transform: translateX(0%); }
             .burger { display: block; }
             .hero-content h1 { font-size: 3rem; }
-            .album-card { width: 100%; margin-bottom: 20px; }
         }
     </style>
 </head>
@@ -231,7 +238,9 @@
         <ul class="nav-links">
             <li><a href="#home">Accueil</a></li>
             <li><a href="#about">À propos</a></li>
+            <li><a href="#evolution">L'Univers</a></li>
             <li><a href="#albums">Discographie</a></li>
+            <li><a href="#tours">Tournées</a></li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -243,15 +252,25 @@
     <header id="home" class="hero">
         <div class="hero-content fade-in">
             <h1>THE WEEKND</h1>
-            <p>L'évolution du R&B alternatif et de la Synthpop.</p>
+            <p>L'évolution du R&B alternatif, de la Pop cinématographique et de la Synthwave.</p>
             <a href="#albums" class="btn">Découvrir les classiques</a>
         </div>
     </header>
 
     <section id="about" class="about-section">
         <div class="container fade-in">
-            <h2>Qui est Abel Tesfaye ?</h2>
-            <p>Connu sous le nom de The Weeknd, Abel Tesfaye a redéfini la musique pop et R&B moderne. Depuis ses premières mixtapes énigmatiques comme <em>House of Balloons</em> jusqu'aux succès mondiaux comme <em>Blinding Lights</em>, il a su créer un univers cinématographique unique, sombre et mélancolique.</p>
+            <h2 style="color: #00d2ff; text-shadow: 0 0 15px rgba(0, 210, 255, 0.6);">Qui est Abel Tesfaye ?</h2>
+            <p>Connu sous le nom de <strong>The Weeknd</strong>, Abel Tesfaye a redéfini la musique pop et R&B moderne. Depuis ses premières mixtapes énigmatiques comme <em>House of Balloons</em> jusqu'aux succès mondiaux colossaux comme <em>Blinding Lights</em>, il a su créer un univers cinématographique unique, à la fois sombre, mélancolique et irrésistiblement dansant.</p>
+            <p>Originaire de Toronto, il a commencé sa carrière dans le mystère le plus total en publiant des morceaux anonymement sur YouTube en 2010. Aujourd'hui, il est l'un des artistes les plus écoutés de l'histoire de la musique, cumulant les records sur Spotify et explosant les classements du Billboard avec sa voix angélique qui contraste parfaitement avec des thèmes lyriques intenses tels que l'amour toxique, les excès et la solitude.</p>
+        </div>
+    </section>
+
+    <section id="evolution" class="evolution-section">
+        <div class="container fade-in">
+            <h2>L'Évolution Visuelle et Sonore</h2>
+            <p style="color: #e0e0e0;">
+                The Weeknd ne se contente pas de sortir de la musique ; il crée de véritables <strong>ères conceptuelles</strong>. Chaque projet est accompagné d'un changement de look radical, d'une narration visuelle poussée et d'un personnage distinct. De la coupe de cheveux iconique de l'ère <em>Beauty Behind the Madness</em> au costume rouge sang et visage bandé de <em>After Hours</em>, jusqu'au visage vieilli du mystérieux animateur radio de <em>Dawn FM</em>, il transforme la musique pop en un véritable art performatif et théâtral.
+            </p>
         </div>
     </section>
 
@@ -260,21 +279,36 @@
             <h2 class="fade-in">Discographie Sélective</h2>
             <div class="album-grid">
                 <div class="album-card fade-in">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/e/e6/The_Weeknd_-_Blinding_Lights.png" alt="After Hours">
-                    <h3>After Hours (2020)</h3>
-                    <p>Le chef-d'œuvre synthwave incluant le hit planétaire <em>Blinding Lights</em>.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/b/b8/The_Weeknd_-_Beauty_Behind_the_Madness.png" alt="Beauty Behind the Madness">
+                    <h3>Beauty Behind the Madness (2015)</h3>
+                    <p>L'explosion grand public. Un album fusionnant R&B sombre et pop magistrale, porté par <em>The Hills</em> et <em>Can't Feel My Face</em>.</p>
                 </div>
                 <div class="album-card fade-in">
                     <img src="https://upload.wikimedia.org/wikipedia/en/3/39/The_Weeknd_-_Starboy.png" alt="Starboy">
                     <h3>Starboy (2016)</h3>
-                    <p>Une collaboration marquante avec Daft Punk et un virage résolument pop.</p>
+                    <p>Une ère iconique marquée par une collaboration légendaire avec Daft Punk et un virage résolument électro-pop.</p>
+                </div>
+                <div class="album-card fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/e/e6/The_Weeknd_-_Blinding_Lights.png" alt="After Hours">
+                    <h3>After Hours (2020)</h3>
+                    <p>Le chef-d'œuvre synthwave absolu plongeant dans la folie de Las Vegas, incluant le hit planétaire record <em>Blinding Lights</em>.</p>
                 </div>
                 <div class="album-card fade-in">
                     <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/The_Weeknd_-_Dawn_FM.png" alt="Dawn FM">
                     <h3>Dawn FM (2022)</h3>
-                    <p>Une expérience d'écoute conceptualisée comme une station de radio purgatoire.</p>
+                    <p>Une expérience d'écoute électrisante conceptualisée comme une station de radio diffusée depuis le purgatoire.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="tours" class="tours-section">
+        <div class="container fade-in">
+            <h2>After Hours til Dawn Tour</h2>
+            <p style="color: #ccc; margin-bottom: 40px;">
+                Une tournée mondiale monumentale, remplissant les plus grands stades de la planète. Avec une scénographie post-apocalyptique époustouflante, des jeux de lumières totalement immersifs, une lune géante suspendue et une statue de robot futuriste, cette tournée est une véritable célébration visuelle et sonore de ses deux derniers albums phares. Une expérience live inoubliable.
+            </p>
+            <a href="https://www.theweeknd.com/tour" target="_blank" class="btn" style="background-color: #ff0055; box-shadow: 0 0 15px rgba(255, 0, 85, 0.5);">Voir le site officiel</a>
         </div>
     </section>
 
