@@ -44,8 +44,9 @@
 
         .nav-links {
             display: flex;
-            justify-content: space-around;
-            width: 40%;
+            justify-content: center;
+            gap: 25px;
+            width: 75%;
             list-style: none;
         }
 
@@ -159,6 +160,14 @@
         .award-card h3 { color: #fff; font-size: 1.5rem; margin-bottom: 10px; }
         .award-card p { font-size: 0.9rem; color: #aaa; }
 
+        /* Contact Section */
+        .contact-section { background: linear-gradient(to top, #050505, #111); }
+        .contact-section h2 { font-size: 2.5rem; margin-bottom: 30px; color: #e50914; text-shadow: 0 0 15px rgba(229, 9, 20, 0.6); }
+        .contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; border-radius: 5px; border: 1px solid #333; background-color: #1a1a1a; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 1rem; transition: all 0.3s; }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: #e50914; box-shadow: 0 0 10px rgba(229, 9, 20, 0.3); }
+        .contact-form button { cursor: pointer; border: none; }
+
         /* Footer Extras */
         .social-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; }
         .social-links a { color: #888; font-size: 1.8rem; transition: color 0.3s, transform 0.3s; text-decoration: none; }
@@ -267,6 +276,7 @@
             <li><a href="#videos">Vidéos</a></li>
             <li><a href="#tours">Tournées</a></li>
             <li><a href="#awards">Récompenses</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -308,7 +318,7 @@
             <h2 class="fade-in">Discographie Sélective</h2>
             <div class="album-grid">
                 <div class="album-card fade-in">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/b/b8/The_Weeknd_-_Beauty_Behind_the_Madness.png" alt="Beauty Behind the Madness">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/4a/01/29/4a0129bc-dbda-5847-f7e9-e3801ce45ddf/15UMGIM39213.rgb.jpg/500x500bb.jpg" alt="Beauty Behind the Madness">
                     <h3>Beauty Behind the Madness (2015)</h3>
                     <p>L'explosion grand public. Un album fusionnant R&B sombre et pop magistrale, porté par <em>The Hills</em> et <em>Can't Feel My Face</em>.</p>
                 </div>
@@ -346,13 +356,13 @@
             <h2 class="fade-in">Clips Légendaires</h2>
             <div class="video-grid">
                 <div class="video-container fade-in">
-                    <iframe src="https://www.youtube.com/embed/4NRXx6U8ABQ" title="Blinding Lights" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/fHI8X4OXluQ" title="Blinding Lights (Audio)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-container fade-in" style="animation-delay: 0.2s;">
-                    <iframe src="https://www.youtube.com/embed/34Na4j8HLjc" title="Starboy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/dYK_GbgD4pY" title="Starboy (Audio)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-container fade-in" style="animation-delay: 0.4s;">
-                    <iframe src="https://www.youtube.com/embed/XXYlCGOWlE0" title="Save Your Tears" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/O1OTWCd40bc" title="Save Your Tears (Audio)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -383,6 +393,19 @@
                     <p>Plusieurs singles certifiés Diamant, dont Blinding Lights, la chanson la plus streamée de l'histoire.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container fade-in">
+            <h2>Contact</h2>
+            <p style="color: #ccc; margin-bottom: 30px;">Une question, une suggestion ou simplement envie de parler de The Weeknd ? Envoyez-moi un message !</p>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message envoyé avec succès !');">
+                <input type="text" placeholder="Votre Nom" required>
+                <input type="email" placeholder="Votre Email" required>
+                <textarea rows="5" placeholder="Votre Message" required></textarea>
+                <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem;">Envoyer</button>
+            </form>
         </div>
     </section>
 
