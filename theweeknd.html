@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Weeknd | FanPage Officieuse</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -140,6 +141,29 @@
         .evolution-section h2 { font-size: 2.5rem; margin-bottom: 30px; color: #8a2be2; text-shadow: 0 0 15px rgba(138, 43, 226, 0.6); }
         .tours-section h2 { font-size: 2.5rem; margin-bottom: 30px; color: #ff0055; text-shadow: 0 0 15px rgba(255, 0, 85, 0.6); }
 
+        /* Videos Section */
+        .videos-section { background-color: #050505; }
+        .videos-section h2 { font-size: 2.5rem; margin-bottom: 40px; color: #00d2ff; text-shadow: 0 0 15px rgba(0, 210, 255, 0.6); }
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; border: 2px solid #333; transition: all 0.4s ease; }
+        .video-container:hover { border-color: #00d2ff; box-shadow: 0 0 20px rgba(0, 210, 255, 0.4); transform: scale(1.02); z-index: 10; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+        /* Awards Section */
+        .awards-section { background: linear-gradient(to bottom, #111, #1a1a1a); }
+        .awards-section h2 { font-size: 2.5rem; margin-bottom: 40px; color: #f1c40f; text-shadow: 0 0 15px rgba(241, 196, 15, 0.6); }
+        .awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .award-card { background: #222; padding: 30px; border-radius: 10px; text-align: center; border-top: 3px solid #f1c40f; transition: transform 0.4s ease, box-shadow 0.4s ease; }
+        .award-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(241, 196, 15, 0.2); background: #2a2a2a; }
+        .award-card i { font-size: 3rem; color: #f1c40f; margin-bottom: 15px; }
+        .award-card h3 { color: #fff; font-size: 1.5rem; margin-bottom: 10px; }
+        .award-card p { font-size: 0.9rem; color: #aaa; }
+
+        /* Footer Extras */
+        .social-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; }
+        .social-links a { color: #888; font-size: 1.8rem; transition: color 0.3s, transform 0.3s; text-decoration: none; }
+        .social-links a:hover { color: #e50914; transform: scale(1.2) translateY(-5px); }
+
         .about-section p, .evolution-section p, .tours-section p {
             font-size: 1.1rem;
             line-height: 1.8;
@@ -240,7 +264,9 @@
             <li><a href="#about">À propos</a></li>
             <li><a href="#evolution">L'Univers</a></li>
             <li><a href="#albums">Discographie</a></li>
+            <li><a href="#videos">Vidéos</a></li>
             <li><a href="#tours">Tournées</a></li>
+            <li><a href="#awards">Récompenses</a></li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -262,6 +288,9 @@
             <h2 style="color: #00d2ff; text-shadow: 0 0 15px rgba(0, 210, 255, 0.6);">Qui est Abel Tesfaye ?</h2>
             <p>Connu sous le nom de <strong>The Weeknd</strong>, Abel Tesfaye a redéfini la musique pop et R&B moderne. Depuis ses premières mixtapes énigmatiques comme <em>House of Balloons</em> jusqu'aux succès mondiaux colossaux comme <em>Blinding Lights</em>, il a su créer un univers cinématographique unique, à la fois sombre, mélancolique et irrésistiblement dansant.</p>
             <p>Originaire de Toronto, il a commencé sa carrière dans le mystère le plus total en publiant des morceaux anonymement sur YouTube en 2010. Aujourd'hui, il est l'un des artistes les plus écoutés de l'histoire de la musique, cumulant les records sur Spotify et explosant les classements du Billboard avec sa voix angélique qui contraste parfaitement avec des thèmes lyriques intenses tels que l'amour toxique, les excès et la solitude.</p>
+            <blockquote class="fade-in" style="margin: 30px auto; max-width: 700px; padding: 20px; border-left: 4px solid #00d2ff; background: rgba(0, 210, 255, 0.05); font-style: italic; color: #ddd; font-size: 1.1rem; text-align: left;">
+                "Je veux toujours créer un monde dans lequel les gens peuvent se perdre, s'évader. La musique n'est que la porte d'entrée vers cet univers."
+            </blockquote>
         </div>
     </section>
 
@@ -312,7 +341,58 @@
         </div>
     </section>
 
+    <section id="videos" class="videos-section">
+        <div class="container">
+            <h2 class="fade-in">Clips Légendaires</h2>
+            <div class="video-grid">
+                <div class="video-container fade-in">
+                    <iframe src="https://www.youtube.com/embed/4NRXx6U8ABQ" title="Blinding Lights" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-container fade-in" style="animation-delay: 0.2s;">
+                    <iframe src="https://www.youtube.com/embed/34Na4j8HLjc" title="Starboy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-container fade-in" style="animation-delay: 0.4s;">
+                    <iframe src="https://www.youtube.com/embed/XXYlCGOWlE0" title="Save Your Tears" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="awards" class="awards-section">
+        <div class="container">
+            <h2 class="fade-in">Impact & Records</h2>
+            <div class="awards-grid">
+                <div class="award-card fade-in">
+                    <i class="fas fa-trophy"></i>
+                    <h3>4 Grammys</h3>
+                    <p>Des récompenses majeures couronnant son excellence musicale, vocale et sa créativité.</p>
+                </div>
+                <div class="award-card fade-in" style="animation-delay: 0.2s;">
+                    <i class="fas fa-football-ball"></i>
+                    <h3>Super Bowl LV</h3>
+                    <p>Un spectacle de la mi-temps iconique et cinématographique regardé par le monde entier.</p>
+                </div>
+                <div class="award-card fade-in" style="animation-delay: 0.4s;">
+                    <i class="fab fa-spotify"></i>
+                    <h3>#1 Spotify</h3>
+                    <p>Premier artiste de l'histoire à franchir les 100 millions d'auditeurs mensuels sur la plateforme.</p>
+                </div>
+                <div class="award-card fade-in" style="animation-delay: 0.6s;">
+                    <i class="fas fa-record-vinyl"></i>
+                    <h3>Diamond</h3>
+                    <p>Plusieurs singles certifiés Diamant, dont Blinding Lights, la chanson la plus streamée de l'histoire.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
+        <div class="social-links fade-in">
+            <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpzMBOS3q" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
+            <a href="https://www.youtube.com/user/TheWeekndVEVO" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/theweeknd/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/theweeknd" target="_blank" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+        </div>
         <p>XO | Créé pour un Portfolio © <span id="current-year"></span></p>
     </footer>
 
