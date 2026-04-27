@@ -83,11 +83,38 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('https://upload.wikimedia.org/wikipedia/commons/e/e4/The_Weeknd_Portrait_by_Brian_Ziff.jpg') center/cover no-repeat;
+            position: relative;
+            overflow: hidden;
+            background-color: #050505;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
         }
 
         .hero-content h1 {
@@ -298,6 +325,10 @@
     </nav>
 
     <header id="home" class="hero">
+        <video class="hero-video" autoplay loop muted playsinline poster="https://upload.wikimedia.org/wikipedia/commons/e/e4/The_Weeknd_Portrait_by_Brian_Ziff.jpg">
+            <source src="theweeknd-bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content fade-in">
             <h1>THE WEEKND</h1>
             <p>L'évolution du R&B alternatif, de la Pop cinématographique et de la Synthwave.</p>
